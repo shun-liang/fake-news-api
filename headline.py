@@ -12,7 +12,7 @@ def generate():
     return headline
 
 def get_guardian_news_headlines():
-    guardian_url = 'https://content.guardianapis.com/search?api-key={0}'.format(GUARDIAN_KEY)
+    guardian_url = 'https://content.guardianapis.com/search?q=quinoa&api-key={0}'.format(GUARDIAN_KEY)
     r = requests.get(guardian_url)
     assert r.status_code == 200
     r = r.json()
